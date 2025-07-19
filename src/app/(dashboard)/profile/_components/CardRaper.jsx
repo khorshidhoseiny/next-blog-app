@@ -7,14 +7,19 @@ async function CardRaper() {
     await fetchCartData();
   return (
     <div className="grid  gap-6 md:grid-cols-3 mb-8">
-      <Card value={numberOfUsers} color="green" title="کاربران" type="users" />
+      <Card
+        value={numberOfUsers}
+        color="primary"
+        title="کاربران"
+        type="users"
+      />
       <Card
         value={numberOfComments}
-        color="blue"
+        color="secondary"
         title="نظرات"
         type="comments"
       />
-      <Card value={numberOfPosts} color="pink" title="پست ها" type="posts" />
+      <Card value={numberOfPosts} color="amber" title="پست ها" type="posts" />
     </div>
   );
 }

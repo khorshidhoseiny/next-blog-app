@@ -76,7 +76,7 @@
   .form {
     @apply flex flex-col gap-y-8 bg-secondary-0 p-4 rounded-xl w-full max-w-lg;
   }
-  .profile-form{
+  .profile-form {
     @apply flex flex-row  gap-y-8 justify-between bg-secondary-0 p-4 items-center rounded-xl w-full max-w-lg;
   }
   .textField__input {

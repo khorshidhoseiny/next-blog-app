@@ -4,7 +4,7 @@ import React from "react";
 
 function CoverImage({ coverImageUrl, title, slug }) {
   return (
-    <div className="relative mb-3 rounded-md overflow-hidden aspect-video">
+    <div className="relative mb-3 rounded-2xl  overflow-hidden aspect-video">
       <Link href={`/blogs/${slug}`}>
         <Image
           fill

@@ -37,10 +37,10 @@ function PostInteraction({ post }) {
   };
   return (
     <div className="flex items-center justify-center gap-x-4">
-      <ButtonIcon onClick={() => BookmarkHandler(post._id)} variant="primary">
+      <ButtonIcon onClick={() => BookmarkHandler(post.id)} variant="primary">
         {post.isBookmarked ? <SolidBookmarkIcon /> : <BookmarkIcon />}
       </ButtonIcon>
-      <ButtonIcon onClick={() => likeHandler(post._id)} variant="red">
+      <ButtonIcon onClick={() => likeHandler(post.id)} variant="red">
         {post.isLiked ? <SolidHeartIcon /> : <HeartIcon />}
       </ButtonIcon>
       <ButtonIcon variant="secondary">

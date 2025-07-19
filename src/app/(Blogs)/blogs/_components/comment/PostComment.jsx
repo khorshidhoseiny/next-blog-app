@@ -30,7 +30,7 @@ function PostComment({ post: { comments, _id: postId } }) {
         <h2 className="text-2xl font-bold text-secondary-800">نظرات</h2>
         <Button
           onClick={() => addNewCommentHandler(null)}
-          variant="outline"
+          variant="secondary"
           className="flex items-center py-2"
         >
           <QuestionMarkCircleIcon className="w-4 ml-2" />
@@ -49,7 +49,7 @@ function PostComment({ post: { comments, _id: postId } }) {
           />
         </Modal>
       </div>
-      <div className="space-y-8 post-comments bg-secondary-0 h-screen  rounded-xl py-6 px-3 lg:px-6 ">
+      <div className="space-y-2 h-auto post-comments bg-secondary-0 rounded-xl py-6 px-3 lg:px-6 ">
         {comments.length > 0 ? (
           comments.map((comment) => {
             return (

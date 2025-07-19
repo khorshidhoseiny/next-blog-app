@@ -6,25 +6,28 @@ import PostInteraction from "./PostInteraction";
 import { toPersianDigits } from "@/utils/numberFormatter";
 
 async function PostsList({ posts }) {
-  console.log(posts);
-
   return posts.length > 0 ? (
     <div className="grid grid-cols-12 gap-x-8">
       {posts.map((post) => {
+        console.log(post);
+
         return (
           <div
             key={post._id}
-            className="col-span-12 bg-secondary-0 mb-7 shadow-md sm:col-span-6 xl:col-span-4 border border-secondary-200 rounded-md"
+            className="col-span-12 bg-secondary-0 mb-7 shadow-md sm:col-span-6 xl:col-span-4 border border-secondary-200 rounded-2xl"
           >
             <CoverImage {...post} />
             {/* post content */}
-            <div className="p-3">
-              <Link href={`/blogs/${post.slug}`}>
-                <h2 className="mb-4 font-bold text-secondary-700">
-                  {post.title}
-                </h2>
-              </Link>
-              {/* post auther - reading Time */}
+            <div className="p-3 ">
+              <div className="border-b mb-2 border-secondary-200">
+                <Link href={`/blogs/${post.slug}`}>
+                  <h2 className="font-bold text-secondary-700">{post.title}</h2>
+                </Link>
+                <p className="text-secondary-500 my-2 text-xs ">
+                  {post.briefText}
+                </p>
+              </div>
+              {/* post author - reading Time */}
               <div className="flex mb-5 items-center justify-between">
                 <Author
                   name={post.author.name}

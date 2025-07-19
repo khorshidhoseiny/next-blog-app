@@ -2,6 +2,9 @@
 
 import { useAuth } from "@/context/AuthContext";
 import NavLink from "./NavLink";
+import { UserCircleIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -28,6 +31,15 @@ function Header() {
       <nav className="container xl:max-w-screen-xl">
         <ul className="flex items-center text-secondary-400 justify-between py-2">
           <div className="flex items-center gap-x-10">
+            <li className="relative aspect-video">
+              <Image
+                alt="logo"
+                src={"/images/logo.png"}
+                className="object-contain"
+                width={40}
+                height={40}
+              />
+            </li>
             {navLinks.map((navLink) => {
               return (
                 <li key={navLink.id}>
@@ -36,11 +48,18 @@ function Header() {
               );
             })}
           </div>
+
           <li>
             {user ? (
-              <NavLink path="/profile">پروفایل</NavLink>
+              <Link
+                href="/profile"
+                className="flex items-end justify-center gap-1 text-primary-600"
+              >
+                <span className="text-xs text-secondary-500">{user.name}</span>
+                <UserCircleIcon className="w-6 h-6 " />
+              </Link>
             ) : (
-              <NavLink path="/signin">ورود</NavLink>
+              <Link href="/signin">ورود</Link>
             )}
           </li>
         </ul>

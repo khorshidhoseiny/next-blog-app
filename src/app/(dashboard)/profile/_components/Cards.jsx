@@ -11,9 +11,11 @@ const iconMap = {
   posts: DocumentIcon,
 };
 const CartColorStyle = {
-  green: "bg-green-300/15 border border-green-500  first:[&>div]:bg-green-500",
-  blue: "bg-blue-300/15 border border-blue-500 first:[&>div]:bg-blue-500",
-  pink: "bg-pink-300/15 border border-pink-500 first:[&>div]:bg-pink-500",
+  primary:
+    "bg-primary-100/20 border border-primary-500 first:[&>div]:bg-primary-500",
+  secondary:
+    "bg-secondary-100/20 border border-secondary-500 first:[&>div]:bg-secondary-500",
+  amber: "bg-amber-100/20 border border-amber-500 first:[&>div]:bg-amber-500",
 };
 
 export function Card({ title, value, color, type }) {

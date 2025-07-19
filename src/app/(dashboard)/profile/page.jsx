@@ -1,8 +1,7 @@
+import Fallback from "@/ui/Fallback";
 import React, { Suspense } from "react";
 import PostTabel from "./posts/_components/PostTabel";
-import Fallback from "@/ui/Fallback";
 import CardRaper from "./_components/CardRaper";
-import { useAuth } from "@/context/AuthContext";
 
 async function profile() {
   return (

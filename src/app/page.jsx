@@ -3,26 +3,23 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="font-bold text-center text-2xl md:text-5xl text-secondary-800 my-20">
+    <section className="flex flex-col items-center justify-center min-h-screen px-4 bg-white">
+      <h1 className="text-2xl md:text-4xl font-semibold text-gray-800 mb-6">
         اپلیکیشن مدیریت بلاگ
       </h1>
+      <p className="text-center text-gray-600 max-w-xl mb-8 leading-relaxed">
+        جایی که می‌تونی یک اپلیکیشن بلاگ کامل رو مدیریت کنی! بلاگ بسازی، کامنت
+        بذاری و همه‌چیز رو از پنلت رصد کنی.
+      </p>
 
-      <div>
-        <p className="text-center text-secondary-500 text-lg leading-loose">
-          جایی که قراره بتونی یه اپلیکیشن بلاگ کامل رو مدیریت کنی!
-          <br /> بتونی بلاگ بسازی - کامنت بگذاری و در پنلت همه اتفاقات رو رصد
-          کنی!
-        </p>
-        <div className="flex justify-center gap-x-8 w-full mt-10">
-          <Button variant="outline">
-            <Link href="/blogs">مطالعه بلاگ ها</Link>
-          </Button>
-          <Button variant="primary">
-            <Link href="/profile">مدیریت بلاگ ها</Link>
-          </Button>
-        </div>
+      <div className="flex gap-4">
+        <Link href="/blogs">
+          <Button variant="outline">مطالعه بلاگ‌ها</Button>
+        </Link>
+        <Link href="/profile">
+          <Button variant="primary">مدیریت بلاگ‌ها</Button>
+        </Link>
       </div>
-    </div>
+    </section>
   );
 }

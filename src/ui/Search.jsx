@@ -27,12 +27,12 @@ function Search() {
         type="text"
         name="search"
         autoComplete="off"
-        placeholder={`جستجو`}
-        className="textField__input  flex justify-between items-center border-2 border-secondary-200 py-3 text-xs bg-secondary-0"
+        placeholder={`جستجو در بلاگ‌ها…`}
+        className="textField__input flex justify-between items-center border-2 border-secondary-200 pr-7 py-3 text-xs bg-secondary-0"
       />
       <button
         type="submit"
-        className="absolute left-0 top-0 ml-3 flex h-full items-center"
+        className="absolute right-0 top-0 mr-2 flex h-full items-center"
       >
         <MagnifyingGlassIcon className="h-4 text-secondary-400" />
       </button>
