@@ -30,7 +30,7 @@ function PostComment({ post: { comments, _id: postId } }) {
         <h2 className="text-2xl font-bold text-secondary-800">نظرات</h2>
         <Button
           onClick={() => addNewCommentHandler(null)}
-          variant="secondary"
+          variant="outline"
           className="flex items-center py-2"
         >
           <QuestionMarkCircleIcon className="w-4 ml-2" />
