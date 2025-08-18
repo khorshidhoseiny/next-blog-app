@@ -27,11 +27,7 @@ function Search() {
         type="text"
         name="search"
         autoComplete="off"
-<<<<<<< HEAD
         placeholder={`جستجو در بلاگ‌ها…`}
-=======
-        placeholder={`جستجو در بلاگ ها`}
->>>>>>> fix resposive mobile bugs
         className="textField__input flex justify-between items-center border-2 border-secondary-200 pr-7 py-3 text-xs bg-secondary-0"
       />
       <button

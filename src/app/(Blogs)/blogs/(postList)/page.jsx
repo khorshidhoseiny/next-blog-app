@@ -5,20 +5,11 @@ import { getPosts } from "@/services/PostsApi";
 import queryString from "query-string";
 import Pagination from "@/ui/Pagination";
 
-<<<<<<< HEAD
-async function BlogPage(props) {
-  const searchParams = await props.searchParams;
-  const queries = queryString.stringify(searchParams);
-  const cookieStore = await cookies();
-
-  const options = await setCookiesOnReq(cookieStore);
-=======
 async function BlogPage({ searchParams }) {
   const queries = queryString.stringify(searchParams);
   const cookieStore = cookies();
 
   const options = setCookiesOnReq(cookieStore);
->>>>>>> fix resposive mobile bugs
   const { posts, totalPages } = await getPosts(queries, options);
   const search = searchParams.search;
 

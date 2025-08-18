@@ -5,14 +5,8 @@ import { toPersianDigits } from "@/utils/numberFormatter";
 import truncateText from "@/utils/trancateText";
 import React, { useState } from "react";
 import Avatar from "@/ui/Avatar";
-<<<<<<< HEAD
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import ButtonIcon from "@/ui/ButtonIcon";
-=======
 
->>>>>>> fix resposive mobile bugs
-
-function UserRow({ user, index, children }) {
+function UserRow({ user, index }) {
   const { name, bookmarkedPosts, likedPosts, email, createdAt, avatarUrl } =
     user;
   console.log(bookmarkedPosts.length);

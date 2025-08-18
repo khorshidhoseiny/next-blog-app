@@ -79,13 +79,9 @@ function Signup() {
       </form>
 
       <Link className="text-secondary-500 mt-6 text-center" href={"/signin"}>
-<<<<<<< HEAD
-        ورود
-=======
         <Button variant="outline" className="w-full hover:btn--secondary">
           ورود
         </Button>
->>>>>>> fix resposive mobile bugs
       </Link>
     </div>
   );

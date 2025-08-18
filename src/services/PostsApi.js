@@ -1,12 +1,6 @@
 import http from "./httpServices";
 
 export default async function getPostBySlug(slug) {
-<<<<<<< HEAD
-  const rest = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/post/slug/${slug}`
-  );
-  const { data } = await rest.json();
-=======
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_BASE_URL}/post/slug/${slug}`
   );
@@ -14,7 +8,6 @@ export default async function getPostBySlug(slug) {
     throw new Error(`Failed to fetch posts: ${res.status} ${res.statusText}`);
   }
   const { data } = await res.json();
->>>>>>> fix resposive mobile bugs
   const { post } = data || {};
   return post;
 }

@@ -4,11 +4,7 @@ const app = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL,
   withCredentials: true,
 });
-<<<<<<< HEAD
-
-=======
 console.log("APP UrL ", process.env.NEXT_PUBLIC_BASE_URL);
->>>>>>> fix resposive mobile bugs
 app.interceptors.request.use(
   (res) => res,
   (err) => Promise.reject(err)

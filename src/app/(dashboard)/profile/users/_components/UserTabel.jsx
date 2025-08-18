@@ -4,10 +4,6 @@ import UserRow from "./UserRow";
 
 export async function UserTabel({ users }) {
   if (!users.length) return <Empty resourceName=" کاربری" />;
-<<<<<<< HEAD
-=======
-
->>>>>>> fix resposive mobile bugs
   return (
     <Table>
       <Table.Header>

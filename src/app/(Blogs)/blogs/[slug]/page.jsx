@@ -3,23 +3,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import RelatedPost from "../_components/RelatedPost";
-<<<<<<< HEAD
-import PostComment from "../_components/comment/postComment";
-import { toLocalDateShort } from "@/utils/dateFormatter";
-import Avatar from "@/ui/Avatar";
-import PostInteraction from "../_components/PostInteraction";
-
-export async function generateStaticParams(params) {
-  const { posts } = await getPosts();
-  const slugs = posts.map((post) => ({ slug: post.slug }));
-  return slugs;
-}
-
-export async function generateMetadata(props) {
-  const params = await props.params;
-  const slug = await params.slug;
-  const post = await getPostBySlug(slug);
-=======
 import PostComment from "../_components/comment/PostComment";
 import { toLocalDateShort } from "@/utils/dateFormatter";
 import Avatar from "@/ui/Avatar";
@@ -36,7 +19,6 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
   const post = await getPostBySlug(slug);
   console.log("post by slug in generate Meta data", post);
->>>>>>> fix resposive mobile bugs
   return {
     title: `پست ${post.title}`,
   };
@@ -46,11 +28,6 @@ async function SinglePost(props) {
   const { params } = await props;
   const { slug } = await params;
   const post = await getPostBySlug(slug);
-<<<<<<< HEAD
-  console.log(post);
-
-=======
->>>>>>> fix resposive mobile bugs
   if (!post) return notFound();
 
   return (
@@ -94,11 +71,6 @@ async function SinglePost(props) {
           </span>
         ))}
       </div>
-<<<<<<< HEAD
-      {/* <PostInteraction post={post} /> */}
-=======
-
->>>>>>> fix resposive mobile bugs
       {post.related.length > 0 && <RelatedPost posts={post.related} />}
       <div className="mt-10">
         <h2 className="text-xl font-bold mb-4">
