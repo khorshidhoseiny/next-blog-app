@@ -11,6 +11,7 @@ async function users() {
   const cookiesStore = await cookies();
   const options = await setCookieOnReq(cookiesStore);
   const { users } = await getAllUsersApi(options);
+<<<<<<< HEAD
   console.log(users);
 
   return (
@@ -23,6 +24,17 @@ async function users() {
         <UserTabel users={users} query={""} />
       </Suspense>
       {/* <Pagination totalPages={totalPages} /> */}
+=======
+
+  return (
+    <div className="flex flex-col overflow-x-scroll items-center justify-center">
+      <div className="flex-col flex mb-6 gap-y-4 w-full ">
+        <h1 className="font-bold">لیست کاربران </h1>
+      </div>
+      <Suspense fallback={<Fallback />}>
+        <UserTabel users={users} />
+      </Suspense>{" "}
+>>>>>>> fix resposive mobile bugs
     </div>
   );
 }

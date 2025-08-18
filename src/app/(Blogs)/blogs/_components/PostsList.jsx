@@ -7,10 +7,16 @@ import { toPersianDigits } from "@/utils/numberFormatter";
 
 async function PostsList({ posts }) {
   return posts.length > 0 ? (
+<<<<<<< HEAD
     <div className="grid grid-cols-12 gap-x-8">
       {posts.map((post) => {
         console.log(post);
 
+=======
+    <div className="grid grid-cols-12 md:gap-x-4 ">
+      {posts.map((post) => {
+        console.log(post);
+>>>>>>> fix resposive mobile bugs
         return (
           <div
             key={post._id}

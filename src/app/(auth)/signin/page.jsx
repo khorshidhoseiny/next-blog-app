@@ -9,6 +9,10 @@ import RHFTextField from "@/ui/RHFTextField";
 import Button from "@/ui/Button";
 import SpinnerMini from "@/ui/SpinnerMini";
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+import { useRouter } from "next/navigation";
+>>>>>>> fix resposive mobile bugs
 
 const schema = yup
   .object({
@@ -18,6 +22,10 @@ const schema = yup
   .required();
 
 function SignIn() {
+<<<<<<< HEAD
+=======
+  const router = useRouter();
+>>>>>>> fix resposive mobile bugs
   const {
     register,
     formState: { errors },
@@ -29,6 +37,10 @@ function SignIn() {
   const { signin, isLoading } = useAuth();
   const onSubmit = async (values) => {
     await signin(values);
+<<<<<<< HEAD
+=======
+    router.push("/profile");
+>>>>>>> fix resposive mobile bugs
   };
 
   return (
@@ -67,7 +79,13 @@ function SignIn() {
       </form>
 
       <Link className="text-secondary-500 mt-6 text-center" href={"/signup"}>
+<<<<<<< HEAD
         ثبت نام
+=======
+        <Button variant="outline" className="w-full hover:btn--secondary">
+          ثبت نام
+        </Button>
+>>>>>>> fix resposive mobile bugs
       </Link>
     </div>
   );

@@ -48,15 +48,25 @@ function Header() {
               );
             })}
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> fix resposive mobile bugs
           <li>
             {user ? (
               <Link
                 href="/profile"
+<<<<<<< HEAD
                 className="flex items-end justify-center gap-1 text-primary-600"
               >
                 <span className="text-xs text-secondary-500">{user.name}</span>
                 <UserCircleIcon className="w-6 h-6 " />
+=======
+                className="flex flex-col items-end justify-center gap-1 text-primary-600"
+              >
+                <UserCircleIcon className="w-6 h-6 " />
+                <span className="text-xs text-secondary-500">{user.name}</span>
+>>>>>>> fix resposive mobile bugs
               </Link>
             ) : (
               <Link href="/signin">ورود</Link>

@@ -7,10 +7,16 @@ import { DeleteCategory, UpdateCategory } from "@/ui/Buttons";
 
 function CategoryRow({ category, index }) {
   const { title, englishTitle, slug, description, createdAt } = category;
+<<<<<<< HEAD
   console.log(category);
 
   return (
     <Table.Row >
+=======
+
+  return (
+    <Table.Row>
+>>>>>>> fix resposive mobile bugs
       <td>{toPersianDigits(index + 1)}</td>
       <td>{title}</td>
       <td>{englishTitle}</td>

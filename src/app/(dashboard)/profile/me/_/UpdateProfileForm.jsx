@@ -62,7 +62,11 @@ function UpdateProfileForm({ userToEdit = {} }) {
       }
 
       const results = await Promise.all(requests);
+<<<<<<< HEAD
       console.log(results);
+=======
+
+>>>>>>> fix resposive mobile bugs
       const updateInfoMsg = results[0]?.message;
       const uploadMsg = results[1]?.message;
       router.push("/profile");

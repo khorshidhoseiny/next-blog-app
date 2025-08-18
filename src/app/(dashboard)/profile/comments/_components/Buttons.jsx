@@ -11,6 +11,10 @@ import toast from "react-hot-toast";
 import UpdateCommentForm from "./EditCommentForm";
 
 export function DeleteComment({ id: commentId }) {
+<<<<<<< HEAD
+=======
+  console.log(commentId);
+>>>>>>> fix resposive mobile bugs
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   const [state, formAction] = useActionState(deleteComment, {
     error: "",
@@ -51,6 +55,10 @@ export function DeleteComment({ id: commentId }) {
 }
 
 export function UpdateComment({ comment }) {
+<<<<<<< HEAD
+=======
+  console.log("updated comment", comment);
+>>>>>>> fix resposive mobile bugs
   const [isEditOpen, setIsEditOpen] = useState(false);
   const onClose = () => setIsEditOpen(false);
   return (

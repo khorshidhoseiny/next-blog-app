@@ -12,7 +12,11 @@ import ButtonIcon from "@/ui/ButtonIcon";
 
 function SideBar({ onClose, children }) {
   return (
+<<<<<<< HEAD
     <div className="overflow-y-auto flex flex-col p-5 h-screen pt-10 mt-10 lg:pt-8">
+=======
+    <div className="overflow-y-auto md:flex  flex-col p-5 h-screen pt-10 mt-10 lg:pt-8">
+>>>>>>> fix resposive mobile bugs
       {/* SideBar header */}
       <div className="flex items-center justify-between w-full mb-5 pb-2 border-b border-b-secondary-200">
         <Link

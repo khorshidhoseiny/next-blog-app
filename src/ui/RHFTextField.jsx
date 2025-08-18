@@ -26,9 +26,15 @@ export default function RHFTextField({
         disabled={disabled}
         id={name}
         dir={dir}
+<<<<<<< HEAD
         className={`textField__input ${disabled && "text-secondary-600 "} ${
           dir === "ltr" ? "text-left" : "text-right"
         }`}
+=======
+        className={`textField__input bg-secondary-300/30 ${
+          disabled && "text-secondary-600 "
+        } ${dir === "ltr" ? "text-left" : "text-right"}`}
+>>>>>>> fix resposive mobile bugs
         {...register(name, validationSchema)}
         {...rest}
       />
