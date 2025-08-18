@@ -8,14 +8,11 @@ const nextConfig = {
         pathname: "/uploads/**",
         hostname: "localhost",
       },
-<<<<<<< HEAD
-=======
       {
         protocol: "https",
         hostname: "api.sun-nextblog.ir",
         pathname: "/uploads/**",
       },
->>>>>>> fix resposive mobile bugs
     ],
   },
 };
