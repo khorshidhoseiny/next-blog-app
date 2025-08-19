@@ -4,7 +4,7 @@ import CommentRow from "./CommentRow";
 import { Fragment } from "react";
 
 export function CommentTabel({ comments }) {
-  if (!comments.length) return <Empty resourceName="نظری" />;
+  if (!comments?.length) return <Empty resourceName="نظری" />;
   let iterator = 0;
   return (
     <Table>

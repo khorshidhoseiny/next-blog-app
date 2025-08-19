@@ -14,7 +14,8 @@ export async function createComment(prevState, { formData, postId, parentId }) {
     text: formData.get("text"),
   };
   try {
-    const { message } = createCommentApi(rawFormData, options);
+    const { message } = await createCommentApi(rawFormData, options);
+    console.log("rawFormData", rawFormData);
     revalidatePath("/blogs/[slug]", "page");
     return {
       message,
@@ -27,25 +28,7 @@ export async function createComment(prevState, { formData, postId, parentId }) {
     };
   }
 }
-// export async function deleteComment(prevState, { commentId }) {
-//   const cookieStore = await cookies();
 
-//   try {
-//     const options = await setCookieOnReq(cookieStore);
-//     const { message } = await deleteCommentsApi(commentId, options);
-//     revalidatePath("/profile/comments");
-//     console.log(message, "message");
-//     return {
-//       message,
-//     };
-//   } catch (err) {
-//     const error = err?.response?.data?.message;
-//     console.log(error, "error");
-//     return {
-//       error,
-//     };
-//   }
-// }
 export async function deleteComment(prevState, { commentId }) {
   const cookieStore = await cookies();
   const options = await setCookieOnReq(cookieStore);

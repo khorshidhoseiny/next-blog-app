@@ -3,22 +3,21 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 import RelatedPost from "../_components/RelatedPost";
+
 import PostComment from "../_components/comment/PostComment";
 import { toLocalDateShort } from "@/utils/dateFormatter";
 import Avatar from "@/ui/Avatar";
 
 export async function generateStaticParams() {
   const { posts } = await getPosts();
-  console.log("posts", posts);
   const slugs = posts.map((post) => ({ slug: post.slug }));
-  console.log(slugs, "slugs");
   return slugs;
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
+  console.log(slug, "slug");
   const post = await getPostBySlug(slug);
-  console.log("post by slug in generate Meta data", post);
   return {
     title: `پست ${post.title}`,
   };

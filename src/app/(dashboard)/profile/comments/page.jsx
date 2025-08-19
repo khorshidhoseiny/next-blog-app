@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import Fallback from "@/ui/Fallback";
 import { CommentTabel } from "./_components/CommentTabel";
+import { getAllCommentsApi } from "@/services/commentService";
 
 async function CommentPage() {
   return (
@@ -11,7 +12,7 @@ async function CommentPage() {
         </h1>
       </div>
       <Suspense fallback={<Fallback />}>
-        <CommentTabel comments={comments} />
+        <CommentTabel />
       </Suspense>
     </div>
   );

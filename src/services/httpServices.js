@@ -4,7 +4,7 @@ const app = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL,
   withCredentials: true,
 });
-console.log("APP UrL ", process.env.NEXT_PUBLIC_BASE_URL);
+
 app.interceptors.request.use(
   (res) => res,
   (err) => Promise.reject(err)

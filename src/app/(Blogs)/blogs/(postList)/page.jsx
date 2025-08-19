@@ -7,6 +7,7 @@ import Pagination from "@/ui/Pagination";
 
 async function BlogPage({ searchParams }) {
   const queries = queryString.stringify(searchParams);
+  console.log(queries, "queries", searchParams);
   const cookieStore = cookies();
 
   const options = setCookiesOnReq(cookieStore);

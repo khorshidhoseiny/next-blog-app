@@ -8,7 +8,6 @@ export function useComments() {
   });
 
   const { comments } = data || {};
-  console.log(comments);
 
   return { comments, isLoading };
 }
