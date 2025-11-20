@@ -75,8 +75,8 @@ export default function AuthProvider({ children }) {
     dispatch({ type: "loading" });
     try {
       const { message } = await updateProfileApi(values);
-      toast.success(message);
       router.push("/profile");
+      toast.success(message);
     } catch (error) {
       const errorMsg = error?.response?.data?.message;
       dispatch({ type: "rejected", payload: errorMsg });
@@ -89,8 +89,8 @@ export default function AuthProvider({ children }) {
     try {
       const { user, message } = await signupApi(values);
       dispatch({ type: "signup", payload: user });
-      toast.success(message);
       router.push("/profile");
+      toast.success(message);
     } catch (error) {
       const errorMsg = error?.response?.data?.message;
       dispatch({ type: "rejected", payload: errorMsg });
